@@ -1,6 +1,6 @@
-# SDIWG - Software Development Insights by Groosg
+# Insights - Software Development Insights by Groosg
 
-This repo hosts the code for https://groosg.github.io/sdiwg/.
+This repo hosts the code for https://groosg.github.io/insights/.
 
 It uses [MkDocs](https://www.mkdocs.org/getting-started/) and Material for
 [MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/).
