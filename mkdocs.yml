@@ -33,7 +33,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
 
 extra:
   social:
