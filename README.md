@@ -2,8 +2,8 @@
 
 This repo hosts the code for https://groosg.github.io/insights/.
 
-It uses [MkDocs](https://www.mkdocs.org/getting-started/) and Material for
-[MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/).
+It uses [MkDocs](https://www.mkdocs.org/getting-started/) and [Material for
+MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/).
 
 ## Local development
 
