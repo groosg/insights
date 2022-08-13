@@ -8,7 +8,7 @@ I decided to put together this website to have some fun and to share technical
 stuff. I don't know exactly which stuff but I think we'll figure this out.
 
 I hope you enjoy the content. For feedback and interaction you can find me
-on [Twitter](https://twitter.com/gr00sg) :fontawesome-brands-twitter:.
+on [Twitter](https://twitter.com/gr00sg) :fontawesome-brands-twitter:{ .twitter }.
 
 !!! note ""
     Speaking of Twitter, this website was created live on Twitter and this was really fun
