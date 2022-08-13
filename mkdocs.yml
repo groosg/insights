@@ -1,1 +1,67 @@
-site_name: Software Development Insights with Groosg
+site_name: "Software Development Insights by Groosg"
+site_description: "A place to share knowledge and grow."
+site_author: "Groosg"
+site_url: "https://groosg.github.io/sdiwg/"
+
+repo_name: "groosg/sdiwg"
+repo_url: "https://github.com/groosg/sdiwg"
+edit_uri: "edit/main/docs/"
+
+copyright: Copyright &copy; 2022 Groosg
+
+theme:
+  name: "material"
+  custom_dir: theme
+
+  language: en
+  features:
+    - content.code.annotate
+    - content.tooltips
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/groosg
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/gr00sg
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
