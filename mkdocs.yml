@@ -50,7 +50,7 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
   card:
     twitter: "@gr00sg"
-    image_url: assets/images/twitter_card.png
+    image: assets/images/twitter_card.png
     type: summary
 
 plugins:
@@ -91,4 +91,6 @@ nav:
   - Home:
     - Home: index.md
   - Tips:
+    - Tips: tips/index.md
     - GitHub Account Setup: tips/gh_setup.md
+    - Twitter Card with Material for MkDocs: tips/mkdocs_twitter_card.md
