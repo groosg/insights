@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - main
+      - twitter-card
 
 env:
   PYTHON_VERSION: 3.x
