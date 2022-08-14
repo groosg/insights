@@ -374,8 +374,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#email-privacy-settings" class="md-nav__link">
-    Email Privacy Settings
+  <a href="#email-privacy" class="md-nav__link">
+    Email Privacy
   </a>
   
 </li>
@@ -443,8 +443,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#email-privacy-settings" class="md-nav__link">
-    Email Privacy Settings
+  <a href="#email-privacy" class="md-nav__link">
+    Email Privacy
   </a>
   
 </li>
@@ -520,7 +520,7 @@ the git CLI.</li>
 It will make things transparent for you in the day-to-day.</li>
 <li>Don't use username and password to fetch and push code.</li>
 </ul>
-<h2 id="email-privacy-settings">Email Privacy Settings<a class="headerlink" href="#email-privacy-settings" title="Permanent link">&para;</a></h2>
+<h2 id="email-privacy">Email Privacy<a class="headerlink" href="#email-privacy" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Go to the <a href="https://github.com/settings/emails">email settings</a> and mark
 the checkbox <code>Keep my email addresses private</code>.</li>
@@ -543,15 +543,7 @@ here</a>.</p>
 <li>See the <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification">commit signature verification</a> page for an explanation.</li>
 <li>
 <p><a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key">Generate a <strong>new</strong> GPG key</a>
-for GitHub.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Avoid using an existing key since GitHub will leak all emails assigned to
-your GPG key regardless if they are associated with your GitHub account or
-not - <a href="https://api.github.com/users/dschuermann/gpg_keys">see this example</a>,
-you can find 6 distinct emails at the moment of this writing, including
-emails that have not to do with GitHub.</p>
-</div>
+for GitHub. (see waning box below)</p>
 <ul>
 <li>When prompted for the GPG key creation, use the following recommendations:<ul>
 <li><code>Please select what kind of key you want</code>: Use a sing only key
@@ -574,6 +566,14 @@ GPG public key on GitHub, on the <a href="https://github.com/settings/keys">same
 mark the checkbox <code>Flag unsigned commits as unverified</code>. If anyone tries to
 impersonate you, the commit will be flagged as <code>Unverified</code>.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">GPG key email leak</p>
+<p>Avoid using an existing key since GitHub will leak all emails assigned to
+your GPG key regardless if they are associated with your GitHub account or
+not. <a href="https://api.github.com/users/dschuermann/gpg_keys">See this example</a>,
+here you can find 6 distinct emails (at the moment of this writing),
+including emails that have nothing to do with GitHub.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Why are we configuring commit signature verification?</p>
 <p>Git impersonation is a real problem that, while most of the time is used
@@ -588,7 +588,7 @@ is the blog post <a href="https://blog.gruntwork.io/how-to-spoof-any-user-on-git
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-08-14T01:34:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-08-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-08-14T14:17:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-08-14</span>
       
     
   </small>
