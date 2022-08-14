@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="css/timeago.css">
+    
       <link rel="stylesheet" href="assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -207,6 +209,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -346,6 +350,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -392,11 +398,7 @@ on <a href="https://twitter.com/gr00sg">Twitter</a> <span class="twemoji twitter
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 13, 2022</span>
-      
-        <br>
-        Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-08-14T13:58:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-08-14</span>
       
     
   </small>
@@ -405,6 +407,8 @@ on <a href="https://twitter.com/gr00sg">Twitter</a> <span class="twemoji twitter
 
   
 
+
+  
 
 
               
@@ -423,7 +427,9 @@ on <a href="https://twitter.com/gr00sg">Twitter</a> <span class="twemoji twitter
         <footer class="md-footer">
   
     
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
       
       
         
@@ -494,6 +500,10 @@ on <a href="https://twitter.com/gr00sg">Twitter</a> <span class="twemoji twitter
     
     
       <script src="assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="js/timeago.min.js"></script>
+      
+        <script src="js/timeago_mkdocs_material.js"></script>
       
     
   </body>
