@@ -1,3 +1,10 @@
+---
+card:
+    title: "A Serious GitHub Account Setup Guide"
+    description: "In this guide, I'm going to show you how to configure your GitHub account to
+improve security and privacy."
+---
+
 # A Serious GitHub Account Setup Guide
 
 In this guide, I'm going to show you how to configure your GitHub account to
