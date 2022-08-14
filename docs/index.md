@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 # Hello there :wave:
 
 My name is Groosg, I'm a software engineer with experience in building and

@@ -51,7 +51,9 @@ extra:
 
 plugins:
   - git-revision-date-localized:
-      enable_creation_date: true
+      type: timeago # date, datetime, iso_date, iso_datetime, timeago
+      enable_creation_date: false
+      fallback_to_build_date: false
 
 markdown_extensions:
   - admonition

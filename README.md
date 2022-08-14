@@ -13,13 +13,41 @@ MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/).
 
 ### Evaluate your changes locally
 
-The simplest way to check your changes is to use the Docker image so you don't
-need to install any Python module on your machine. You can do it with:
+Get the code
 
 ```shell
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+git clone git@github.com:groosg/insights.git
+cd insights
 ```
 
-If you prefer to install things locally, use the
-[Material for MkDocs installation](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)
-since it will get all the dependencies, including MkDocs, installed.
+Create a virtual environment
+
+```shell
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies
+
+```shell
+pip install \
+    "mkdocs-git-revision-date-localized-plugin>=1.0" \
+    "mkdocs-minify-plugin>=0.3" \
+    "mkdocs-redirects>=1.0"
+```
+
+Install mkdocs and material for mkdocs
+
+```shell
+pip install mkdocs-material
+```
+
+Run
+
+```shell
+venv/bin/mkdocs serve
+```
+
+Check the [Material for MkDocs installation](https://squidfunk.github.io/mkdocs-material/getting-started/#installation) for a variaty of installation methods.
+
+**TODO:** Create and push a Docker image with the `mkdocs-git-revision-date-localized-plugin`.
