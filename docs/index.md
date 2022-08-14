@@ -1,6 +1,7 @@
 ---
 hide:
   - footer
+  - navigation
 ---
 
 # Hello there :wave:
