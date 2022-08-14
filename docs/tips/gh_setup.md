@@ -1,4 +1,4 @@
-# A Serious GitHub Account Setup
+# A Serious GitHub Account Setup Guide
 
 In this guide, I'm going to show you how to configure your GitHub account to
 improve security and privacy. This guide is somewhat opinionated about some
@@ -45,12 +45,15 @@ It will make things transparent for you in the day-to-day.
 
 ## Email Privacy Settings
 
-- Go to the [email settings](https://github.com/settings/emails) and mark the checkbox `Keep my email addresses private`.
+- Go to the [email settings](https://github.com/settings/emails) and mark
+the checkbox `Keep my email addresses private`.
 - Set your no-reply email `<username>@users.noreply.github.com` as the [commit email address in Git](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-in-git).
 ```shell
 git config --global user.email "<username>@users.noreply.github.com"
 ```
-- Mark the checkbox `Block command line pushes that expose my email` - [see here](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address).
+- In the same [email settings](https://github.com/settings/emails) page, mark
+the checkbox `Block command line pushes that expose my email` -
+[see here an explanation](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address).
 - [See this documentation for more details](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address).
 
 !!! warning "GitHub emails used in commits are publicly available to anyone"
@@ -60,25 +63,31 @@ git config --global user.email "<username>@users.noreply.github.com"
 
 ## Configure Commit Signature Verification
 
-- Configure [commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification). This doc page has a good explanation of
-why it's important.
+- See the [commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification) page for an explanation.
 - [Generate a **new** GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 for GitHub.
-!!! warning
-    Avoid using an existing key since GitHub will leak all emails assigned to
-    your GPG key regardless if they are associated with your GitHub account or
-    not - [see this example](https://api.github.com/users/dschuermann/gpg_keys),
-    you can find 6 distinct emails at the moment of this writing, including
-    emails that have not to do with GitHub.
-- When prompted for the GPG key creation, use the following recommendations:
-    - `Please select what kind of key you want`: Use a sing only key `(4) RSA (sign only)`.
-    - `What keysize do you want?`: Use the size recommended in the GitHub docs `4096`.
-    - `Key is valid for?`: Specify a time to live `5y`.
-    - `Email address`: Use your no-reply address `<username>@users.noreply.github.com`.
-    - And, of course, set a reosanable passphrase.
-- After you save your GPG public key on GitHub, on the [same page](https://github.com/settings/keys)
-mark the checkbox `Flag unsigned commits as unverified`. It will enable the
-[vigilante mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits) and if anyone tries to
+
+    !!! warning
+        Avoid using an existing key since GitHub will leak all emails assigned to
+        your GPG key regardless if they are associated with your GitHub account or
+        not - [see this example](https://api.github.com/users/dschuermann/gpg_keys),
+        you can find 6 distinct emails at the moment of this writing, including
+        emails that have not to do with GitHub.
+
+    - When prompted for the GPG key creation, use the following recommendations:
+        - `Please select what kind of key you want`: Use a sing only key
+        `(4) RSA (sign only)`.
+        - `What keysize do you want?`: Use the size recommended in the GitHub
+        docs `4096`.
+        - `Key is valid for?`: Specify a time to live `5y`.
+        - `Email address`: Use your no-reply address `<username>@users.noreply.github.com`.
+        - And, of course, set a reosanable passphrase.
+
+- Follow the remaining steps to [add your GPG key to GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
+and [configure Git with your signing key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key).
+- Enable [vigilante mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits). After you save your
+GPG public key on GitHub, on the [same page](https://github.com/settings/keys)
+mark the checkbox `Flag unsigned commits as unverified`. If anyone tries to
 impersonate you, the commit will be flagged as `Unverified`.
 
 !!! info "Why are we configuring commit signature verification?"
