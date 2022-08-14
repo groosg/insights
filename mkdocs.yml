@@ -73,3 +73,5 @@ markdown_extensions:
 nav:
   - Home:
     - Home: index.md
+  - Tips:
+    - GitHub Account Setup: tips/gh_setup.md
