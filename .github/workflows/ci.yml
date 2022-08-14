@@ -1,18 +1,49 @@
-name: ci 
+name: ci
+
 on:
   push:
     branches:
       - main
+
+env:
+  PYTHON_VERSION: 3.x
+
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          python-version: 3.x
+          fetch-depth: 0
+
+      - name: Set up Python runtime
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Set up build cache
+        uses: actions/cache@v3
+        id: cache
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('.cache/**') }}
+          path: .cache
+
+      - name: Install Python dependencies
+        run: |
+          pip install .
+          pip install \
+            "mkdocs-git-revision-date-localized-plugin>=1.0" \
+            "mkdocs-minify-plugin>=0.3" \
+            "mkdocs-redirects>=1.0"
+
       - name: Install mkdocs-material
         run: pip install mkdocs-material 
+
       - name: Deploy site
         env:
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
