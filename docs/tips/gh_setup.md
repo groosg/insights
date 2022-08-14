@@ -43,7 +43,7 @@ the git CLI.
 It will make things transparent for you in the day-to-day.
 - Don't use username and password to fetch and push code.
 
-## Email Privacy Settings
+## Email Privacy
 
 - Go to the [email settings](https://github.com/settings/emails) and mark
 the checkbox `Keep my email addresses private`.
@@ -65,15 +65,7 @@ the checkbox `Block command line pushes that expose my email` -
 
 - See the [commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification) page for an explanation.
 - [Generate a **new** GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
-for GitHub.
-
-    !!! warning
-        Avoid using an existing key since GitHub will leak all emails assigned to
-        your GPG key regardless if they are associated with your GitHub account or
-        not - [see this example](https://api.github.com/users/dschuermann/gpg_keys),
-        you can find 6 distinct emails at the moment of this writing, including
-        emails that have not to do with GitHub.
-
+for GitHub. (see waning box below)
     - When prompted for the GPG key creation, use the following recommendations:
         - `Please select what kind of key you want`: Use a sing only key
         `(4) RSA (sign only)`.
@@ -89,6 +81,13 @@ and [configure Git with your signing key](https://docs.github.com/en/authenticat
 GPG public key on GitHub, on the [same page](https://github.com/settings/keys)
 mark the checkbox `Flag unsigned commits as unverified`. If anyone tries to
 impersonate you, the commit will be flagged as `Unverified`.
+
+!!! warning "GPG key email leak"
+    Avoid using an existing key since GitHub will leak all emails assigned to
+    your GPG key regardless if they are associated with your GitHub account or
+    not. [See this example](https://api.github.com/users/dschuermann/gpg_keys),
+    here you can find 6 distinct emails (at the moment of this writing),
+    including emails that have nothing to do with GitHub.
 
 !!! info "Why are we configuring commit signature verification?"
     Git impersonation is a real problem that, while most of the time is used
