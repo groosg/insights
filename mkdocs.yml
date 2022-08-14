@@ -1,5 +1,5 @@
 site_name: "Insights by Groosg"
-site_description: "Software development insights: tutotials, guides, tips, etc. A place to share knowledge and grow."
+site_description: "Software development insights by Groosg: tutorials, guides, tips, etc."
 site_author: "Groosg"
 site_url: "https://groosg.github.io/insights"
 
@@ -48,8 +48,13 @@ extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
+  card:
+    twitter: "@gr00sg"
+    image_url: assets/images/twitter_card.png
+    type: summary
 
 plugins:
+  - search
   - git-revision-date-localized:
       type: timeago # date, datetime, iso_date, iso_datetime, timeago
       enable_creation_date: false
