@@ -51,7 +51,7 @@ extra:
   card:
     twitter: "@gr00sg"
     image_url: assets/images/twitter_card.png
-    type: summary_large_image
+    type: summary
 
 plugins:
   - search
