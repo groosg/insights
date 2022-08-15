@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://groosg.github.io/insights/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://groosg.github.io/insights/tips/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://groosg.github.io/insights/tips/gh_setup/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://groosg.github.io/insights/tips/mkdocs_twitter_card/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
