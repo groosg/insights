@@ -50,8 +50,8 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
   card:
     twitter: "@gr00sg"
-    image: assets/images/twitter_card.png
-    type: summary
+    image: assets/images/twitter_card_large.png
+    type: summary_large_image # summary_large_image, summary
 
 plugins:
   - search
